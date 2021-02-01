@@ -1,0 +1,12 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container__main-title-name {
+    font-size: 28px;
+}
+
+.container__main-title-position {
+    font-size: 74px;
+    text-transform: uppercase;
+}
