@@ -2,6 +2,34 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.dark {
+    background-color: #232326;
+    color: #F3F2F0;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: auto 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__list-item-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #F3F2F0;
+}
+
+.header__list-item-link:hover {
+    color: #D40000;
+}
+
+.container__image {
+    width: 100%;
+    margin-bottom: 120px;
+
+}
+
 .container__main-title-name {
     font-size: 28px;
 }
