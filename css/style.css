@@ -7,6 +7,19 @@ body {
     color: #F3F2F0;
 }
 
+.dark .header__list-item-link {
+    color: #F3F2F0;
+}
+
+.light {
+    background-color: #E5E5E5;
+    color: #010101;
+}
+
+.light .header__list-item-link {
+    color: #010101;
+}
+
 .wrapper {
     max-width: 1140px;
     margin: auto 0;
@@ -14,10 +27,38 @@ body {
     padding-right: 15px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.header__list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+}
+
+.header__list-item {
+    padding-left: 16px; 
+    padding-right: 16px;
+}
+
+.header__list-item:first-child {
+    padding-left: 0;
+}
+
+.header__list-item:last-child {
+    padding-right: 0;
+}
+
 .header__list-item-link {
     text-decoration: none;
     font-size: 14px;
-    color: #F3F2F0;
 }
 
 .header__list-item-link:hover {
