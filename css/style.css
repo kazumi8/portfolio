@@ -1,5 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }
 
 .dark {
@@ -7,7 +8,7 @@ body {
     color: #F3F2F0;
 }
 
-.dark .header__list-item-link {
+.dark .link-list__link {
     color: #F3F2F0;
 }
 
@@ -16,13 +17,19 @@ body {
     color: #010101;
 }
 
-.light .header__list-item-link {
+.light .link-list__link {
     color: #010101;
+}
+
+.h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
 }
 
 .wrapper {
     max-width: 1140px;
-    margin: auto 0;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -35,7 +42,7 @@ body {
     padding-bottom: 60px;
 }
 
-.header__list {
+.link-list {
     padding-left: 0;
     margin: 0;
     list-style: none;
@@ -43,25 +50,25 @@ body {
     display: flex;
 }
 
-.header__list-item {
+.link-list__item {
     padding-left: 16px; 
     padding-right: 16px;
 }
 
-.header__list-item:first-child {
+.link-list__item:first-child {
     padding-left: 0;
 }
 
-.header__list-item:last-child {
+.link-list__item:last-child {
     padding-right: 0;
 }
 
-.header__list-item-link {
+.link-list__link {
     text-decoration: none;
     font-size: 14px;
 }
 
-.header__list-item-link:hover {
+.link-list__link:hover {
     color: #D40000;
 }
 
@@ -71,11 +78,63 @@ body {
 
 }
 
+.container__main-title {
+    margin-bottom: 100px;
+}
+
 .container__main-title-name {
+    margin: 0;
     font-size: 28px;
 }
 
 .container__main-title-position {
+    margin: 0;
     font-size: 74px;
     text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+
+.social__title {
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    position: relative;
+}
+
+.social__title::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/arrow.svg");
+    position: absolute;
+    right: 0;
+    top: calc(50% - 6px);   
+}
+
+.skill__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.skill__list-item {
+    flex: 0 0 24%;
+}
+
+.skill__list-title {
+    text-transform: uppercase;
+}
+
+.skill__list-description {
+    line-height: 150%;
 }
