@@ -12,6 +12,14 @@ body {
     color: #F3F2F0;
 }
 
+.dark .svg-circle circle {
+    fill: #D40000;
+}
+
+.dark .svg-triangle path {
+    fill: #FFFFFF;
+}
+
 .light {
     background-color: #E5E5E5;
     color: #010101;
@@ -20,6 +28,14 @@ body {
 .light .link-list__link {
     color: #010101;
 }
+
+.light .svg-circle circle {
+    fill: #FFFFFF;
+}
+
+.light .svg-triangle path {
+    fill: #D40000;
+} 
 
 .h3 {
     font-size: 16px;
@@ -70,6 +86,26 @@ body {
 
 .link-list__link:hover {
     color: #D40000;
+}
+
+.link-list__line li {
+    position: relative;
+}
+
+.link-list__line li::before {
+    content: '';
+    display: block;
+    width: 01px;
+    height: 24px;
+    background-color: #F3F2F0;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12px);
+}
+
+.link-list__line li:first-child::before {
+    display: none;
 }
 
 .container__image {
@@ -138,3 +174,24 @@ body {
 .skill__list-description {
     line-height: 150%;
 }
+
+
+
+
+.svg-circle-main {
+    width: 253px;
+    height: 253px;
+}
+
+.svg-circle-social {
+    width: 106px;
+    height: 106px;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
