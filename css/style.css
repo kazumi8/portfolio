@@ -20,6 +20,15 @@ body {
     fill: #FFFFFF;
 }
 
+.dark .steps__list-item,
+.dark .social {
+    border-bottom: 1px solid #F3F2F0;
+}
+
+.dark .steps__list-item:first-child {
+    border-top: 1px solid #F3F2F0;
+}
+
 .light {
     background-color: #E5E5E5;
     color: #010101;
@@ -36,6 +45,15 @@ body {
 .light .svg-triangle path {
     fill: #D40000;
 } 
+
+.light .steps__list-item,
+.dark .social {
+    border-bottom: 1px solid #F3F2F0;
+}
+
+.light .steps__list-item:first-child {
+    border-top: 1px solid #F3F2F0;
+}
 
 .h3 {
     font-size: 16px;
@@ -132,6 +150,10 @@ body {
     z-index: 4;
 }
 
+.container__social {
+    margin-bottom: 60px;
+}
+
 .social {
     display: flex;
     justify-content: space-between;
@@ -175,7 +197,7 @@ body {
 }
 
 .skill__list-item {
-    flex: 0 0 24%;
+    flex: 0 0 21%;
 }
 
 .skill__list-title {
@@ -204,14 +226,14 @@ body {
     display: flex;
    justify-content: space-between;
    position: relative;
-   padding-left: 70px;
+   padding: 30px 10px 30px 70px;
 }
 
 .steps__list-item::before {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: calc(50% - 21px);
     left: 0;
     font-size: 28px;
     font-weight: 400;
