@@ -3,6 +3,8 @@ body {
     font-size: 14px;
 }
 
+
+/*Тема*/
 .dark {
     background-color: #232326;
     color: #F3F2F0;
@@ -21,7 +23,9 @@ body {
 }
 
 .dark .steps__list-item,
-.dark .social {
+.dark .social,
+.dark .cv__text,
+.dark .cv__title {
     border-bottom: 1px solid #F3F2F0;
 }
 
@@ -47,19 +51,49 @@ body {
 } 
 
 .light .steps__list-item,
-.dark .social {
-    border-bottom: 1px solid #F3F2F0;
+.light .social,
+.light .cv__text,
+.light .cv__title {
+    border-bottom: 1px solid #010101;
 }
 
 .light .steps__list-item:first-child {
-    border-top: 1px solid #F3F2F0;
+    border-top: 1px solid #010101;
 }
 
-.h3 {
+
+
+/*Текст*/
+.text-bold {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
 }
+
+.text-regular { 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.text-small { 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.title-bold {   
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.title-regular {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
 
 .wrapper {
     max-width: 1140px;
@@ -76,6 +110,44 @@ body {
     padding-bottom: 60px;
 }
 
+
+
+/*container*/
+.container__image {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.container__main-title {
+    margin-bottom: 100px;
+    position: relative;
+}
+ 
+.container__main-title-name {
+    margin: 0;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.container__main-title-position {
+    margin: 0;
+    font-size: 74px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 4;
+}
+
+.container__social {
+    margin-bottom: 60px;
+}
+
+.container__cv {
+    margin-bottom: 180px;
+}
+
+
+/*Блок link-list*/
 .link-list {
     padding-left: 0;
     margin: 0;
@@ -99,8 +171,6 @@ body {
 
 .link-list__link {
     text-decoration: none;
-    font-size: 14px;
-    line-height: 24px;
 }
 
 .link-list__link:hover {
@@ -124,36 +194,9 @@ body {
     top: 0;
 }
 
-.container__image {
-    width: 100%;
-    margin-bottom: 120px;
-}
 
-.container__main-title {
-    margin-bottom: 100px;
-    position: relative;
-}
- 
-.container__main-title-name {
-    margin: 0;
-    margin-bottom: 30px;
-    font-size: 28px; 
-    position: relative;
-    z-index: 3;
-}
 
-.container__main-title-position {
-    margin: 0;
-    font-size: 74px;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 4;
-}
-
-.container__social {
-    margin-bottom: 60px;
-}
-
+/*Блок social*/
 .social {
     display: flex;
     justify-content: space-between;
@@ -162,9 +205,6 @@ body {
 
 .social__title {
     padding-right: 30px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
     margin: 0;
     position: relative;
 }
@@ -184,6 +224,8 @@ body {
     position: relative;
 }
 
+
+/*Блок skill*/
 .container__skill {
     margin-bottom: 180px;
 }
@@ -210,10 +252,55 @@ body {
     line-height: 150%;
 }
 
-.container__cv {
-    margin-bottom: 180px;
+
+
+/*Блок cv*/
+.cv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 120px 0;
+} 
+
+.cv__title, .cv__text  {
+    margin: 0;
+    padding-bottom: 60px;
 }
 
+.cv__title {
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.cv__text {
+    opacity: .8;
+}
+
+.cv__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-column-end: 3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 60px 70px;
+}
+
+.cv__list-title {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.cv__list-text {
+    margin: 0;
+    opacity: .8;
+}
+
+
+
+
+/*Блок steps*/
 .steps__list {
     margin: 0;
     padding: 0;
@@ -254,9 +341,6 @@ body {
 
 .steps__list-title {
     margin: 0;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 42px;
 }
 
 .steps__list-text {
@@ -270,7 +354,7 @@ body {
 }
 
 
-
+/*svg элементы*/
 .svg-circle-main-title {
     width: 253px;
     height: 253px;
@@ -294,6 +378,8 @@ body {
     left: -151px;
     z-index: 2;
 }
+
+
 
 .visually-hidden {
     position: absolute;
