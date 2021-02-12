@@ -33,6 +33,11 @@ body {
     border-top: 1px solid #F3F2F0;
 }
 
+.dark .cv__list-text,
+.dark .cv__text {
+    color: rgba(243, 242, 240, .8);
+}
+
 .light {
     background-color: #E5E5E5;
     color: #010101;
@@ -61,6 +66,10 @@ body {
     border-top: 1px solid #010101;
 }
 
+.light .cv__list-text,
+.light .cv__text {
+    color: rgba(1, 1, 1, .8);
+}
 
 
 /*Текст*/
@@ -257,7 +266,7 @@ body {
 /*Блок cv*/
 .cv {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.1fr;
     grid-template-rows: auto auto;
     grid-gap: 120px 0;
 } 
@@ -270,10 +279,6 @@ body {
 .cv__title {
     text-transform: uppercase;
     letter-spacing: 0.03em;
-}
-
-.cv__text {
-    opacity: .8;
 }
 
 .cv__list {
@@ -294,7 +299,6 @@ body {
 
 .cv__list-text {
     margin: 0;
-    opacity: .8;
 }
 
 
