@@ -6,9 +6,8 @@ body {
 
 /*Тема*/
 .dark {
-    background-color: #232326;
     color: #F3F2F0;
-    /* background: linear-gradient() */
+    background: linear-gradient(to bottom, #232326 50%, #151517 50%, #232326);
 }
 
 .dark .link-list__link {
@@ -42,6 +41,7 @@ body {
 .light {
     background-color: #E5E5E5;
     color: #010101;
+    background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5);
 }
 
 .light .link-list__link {
@@ -392,6 +392,57 @@ body {
 
     min-width: 52%;
 }
+
+
+
+/*Блок portfolio*/
+.portfolio__title {
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 90px;
+    text-transform: uppercase;
+}
+
+.portfolio__list-tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio__list-item {
+    margin-right: 40px;
+}
+
+.portfolio__list-link {
+    border-bottom: 2px solid #F3F2F0;
+}
+
+.portfolio__tabs-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__work {
+  flex-direction: column;
+}
+
+.portfolio__work-title {
+    margin: 0;
+}
+
+.portfolio__work-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    
+}
+
+.portfolio__work-text {
+    margin: 0;
+}
+
 
 
 /*svg элементы*/
