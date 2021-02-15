@@ -8,6 +8,7 @@ body {
 .dark {
     background-color: #232326;
     color: #F3F2F0;
+    /* background: linear-gradient() */
 }
 
 .dark .link-list__link {
