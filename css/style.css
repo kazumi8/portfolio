@@ -336,6 +336,10 @@ body {
 
 
 /*Блок steps*/
+.steps {
+    margin-bottom: 180px;
+}
+
 .steps__list {
     margin: 0;
     padding: 0;
@@ -396,51 +400,104 @@ body {
 
 
 /*Блок portfolio*/
+.portfolio {
+    position: relative;
+}
+
 .portfolio__title {
+    margin-bottom: 100px;
     font-size: 74px;
     font-weight: 700;
     line-height: 90px;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
-.portfolio__list-tabs {
+.portfolio__tabs-list {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 21px;
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    border-bottom: 1px solid rgba(243,242,240,0.2); 
+    position: relative;
+    z-index: 4;
 }
 
 .portfolio__list-item {
-    margin-right: 40px;
+    margin-right: 78px;
 }
 
 .portfolio__list-link {
-    border-bottom: 2px solid #F3F2F0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(243,242,240,0.5);
+    border-bottom: 2px solid transparent;   
+    text-decoration: none;
+    position: relative;
+    z-index: 3;
 }
 
-.portfolio__tabs-item {
-    display: flex;
-    justify-content: space-between;
+.portfolio__list-link.active {
+    padding-bottom: 21px;
+    font-size: 16px; 
+    font-weight: 500;
+    line-height: 24px;
+    color: #F3F2F0;
+    border-bottom: 2px solid #F3F2F0;   
 }
 
 .portfolio__work {
-  flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; 
+    flex-direction: column;  
+}
+
+.portfolio__work-item {
+    padding: 60px 0;
+    display: grid;
+    grid-template-areas: "title image"
+                         "list image"
+                         "text image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
+    border-bottom: 1px solid #F3F2F0;
 }
 
 .portfolio__work-title {
     margin: 0;
+    padding-top: 39px;
+    grid-area: title;
 }
 
 .portfolio__work-list {
     margin: 0;
     padding: 0;
+    padding-top: 6px;
     list-style: none;
-    display: flex;
-    
+    grid-area: list;
+}
+
+.portfolio__work-list-item {
+  padding-bottom: 9px;
+    opacity: 0.8;
 }
 
 .portfolio__work-text {
     margin: 0;
+    grid-area: text;
+}
+
+.portfolio__work-img {
+    grid-area: image;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -470,6 +527,13 @@ body {
     z-index: 2;
 }
 
+.svg-circle-portfolio {
+    height: 465px;
+    width: 465px;
+    position: absolute;
+    top: -89px;
+    left: 346px;
+}
 
 
 .visually-hidden {
