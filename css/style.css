@@ -430,6 +430,7 @@ body {
 }
 
 .portfolio__list-link {
+    padding-bottom: 21px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -440,13 +441,16 @@ body {
     z-index: 3;
 }
 
-.portfolio__list-link.active {
-    padding-bottom: 21px;
+.portfolio__list-item.ui-tabs-active .portfolio__list-link {
     font-size: 16px; 
     font-weight: 500;
     line-height: 24px;
     color: #F3F2F0;
     border-bottom: 2px solid #F3F2F0;   
+}
+
+.portfolio__list-link:focus {
+    outline: none;
 }
 
 .portfolio__work {
@@ -499,6 +503,30 @@ body {
     position: relative;
     z-index: 2;
 }
+
+
+
+/* advantages */
+.advantages {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.advantages__title { 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #F3F2F0;
+}
+    
+.advantages__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgba( 243, 242, 240, .8);
+}
+
 
 
 
