@@ -402,6 +402,7 @@ body {
 /*Блок portfolio*/
 .portfolio {
     position: relative;
+    margin-bottom: 180px;
 }
 
 .portfolio__title {
@@ -507,13 +508,120 @@ body {
 
 
 /* advantages */
+.container__text-advantages {
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0 186px 80px 0px;
+    border-bottom: 1px solid #F3F2F0;  
+}
+
 .advantages {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 79px 25px;
+}
+
+.advantages__item {
+    padding-left: 80px;
+}
+
+.advantages__item--money {
+    position: relative;
+}
+
+.advantages__item--money::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/money.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.advantages__item--picture {
+    position: relative;
+}
+
+.advantages__item--picture::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/image.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.advantages__item--clock {
+    position: relative;
+}
+
+.advantages__item--clock::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/clock.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.advantages__item--phone {
+    position: relative;
+}
+
+.advantages__item--phone::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/phone.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.advantages__item--code {
+    position: relative;
+}
+
+.advantages__item--code::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/code.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+}
+
+.advantages__item--document {
+    position: relative;
+}
+
+.advantages__item--document::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/document.svg");
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
 }
 
 .advantages__title { 
+    margin: 0;
+    margin-bottom: 10px;
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
@@ -521,6 +629,7 @@ body {
 }
     
 .advantages__text {
+    margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
