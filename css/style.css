@@ -1,13 +1,20 @@
 body {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
+    color: var(--main-text-color);
 }
+
 
 /*Тема*/
 .dark {
     --main-text-color: #F3F2F0;
     --fill-circle: #D40000;
     --fill-triangle: #FFFFFF;
+    --border-bottom: 1px solid #F3F2F0;
+    --bold-border-bottom: 2px solid #F3F2F0;
+    --transparent-border-bottom: 1px solid rgba(243, 242, 240, 0.2); 
+    --transparent-link-color: rgba(243, 242, 240, 0.5);
+    --transparent-text-color: rgba( 243, 242, 240, .8);
 
     background-color: #232326;
     background: linear-gradient(to bottom, #232326 50%, #151517 50%, #232326);
@@ -17,45 +24,26 @@ body {
     --main-text-color: #010101;
     --fill-circle: #FFFFFF;
     --fill-triangle: #D40000;
+    --border-bottom: 1px solid #010101;
+    --bold-border-bottom: 2px solid #010101;
+    --transparent-border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    --transparent-link-color: rgba(1, 1, 1, 0.5);
+    --transparent-text-color: rgba( 1, 1, 1, .8);
+
 
     background-color: #E5E5E5;
     background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5);
 
 }
 
-
-
-.dark .steps__list-item,
-.dark .social,
-.dark .cv__text,
-.dark .cv__title {
-    border-bottom: 1px solid #F3F2F0;
-}
-
 .dark .steps__list-item:first-child {
     border-top: 1px solid #F3F2F0;
-}
-
-.dark .cv__list-text,
-.dark .cv__text {
-    color: rgba(243, 242, 240, .8);
-}
-
-.light .steps__list-item,
-.light .social,
-.light .cv__text,
-.light .cv__title {
-    border-bottom: 1px solid #010101;
 }
 
 .light .steps__list-item:first-child {
     border-top: 1px solid #010101;
 }
 
-.light .cv__list-text,
-.light .cv__text {
-    color: rgba(1, 1, 1, .8);
-}
 
 
 /*Текст*/
@@ -104,6 +92,8 @@ body {
     padding-top: 42px;
     padding-bottom: 60px;
 }
+
+
 
 
 
@@ -197,6 +187,31 @@ body {
     display: flex;
     justify-content: space-between;
     padding-bottom: 58px;
+    border-bottom: var(--border-bottom);
+}
+
+.social__title {
+    padding-right: 30px;
+    margin: 0;
+    position: relative;
+    letter-spacing: 0.1px;
+    transition: border 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.social__title::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/arrow.svg");
+    position: absolute;
+    right: 0;
+    top: calc(50% - 6px);   
+}
+
+.social__title:hover {
+    border-bottom: 2px solid #F3F2F0;
 }
 
 .social .link-list__item {
@@ -209,30 +224,6 @@ body {
 
 .social .link-list__item:last-child {
     padding-right: 0;
-}
-
-.social__title {
-    padding-right: 30px;
-    margin: 0;
-    position: relative;
-    letter-spacing: 0.1px;
-    transition: border 0.3s;
-    border-bottom: 2px solid transparent;
-}
-
-.social__title:hover {
-    border-bottom: 2px solid #F3F2F0;
-}
-
-.social__title::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 12px;
-    background-image: url("../img/arrow.svg");
-    position: absolute;
-    right: 0;
-    top: calc(50% - 6px);   
 }
 
 .social__wrapper {
@@ -283,6 +274,7 @@ body {
 .cv__title, .cv__text  {
     margin: 0;
     padding-bottom: 60px;
+    border-bottom: var(--border-bottom);
 }
 
 .cv__title {
@@ -292,6 +284,7 @@ body {
 
 .cv__text {
     padding-left: 37px;
+    color: var(--transparent-text-color);
 }
 
 .cv__list {
@@ -316,6 +309,7 @@ body {
 
 .cv__list-text {
     margin: 0;
+    color: var(--transparent-text-color);
 }
 
 
@@ -341,6 +335,7 @@ body {
    padding: 0 12px 0 74.4px;
    align-items: center;
    height: 100.6px;
+   border-bottom: var(--border-bottom);
 }
 
 .steps__list-item:first-child {
@@ -407,7 +402,7 @@ body {
     padding-bottom: 21px;
     display: flex;
     list-style: none;
-    border-bottom: 1px solid rgba(243,242,240,0.2); 
+    border-bottom: var(--transparent-border-bottom);
     position: relative;
     z-index: 4;
 }
@@ -421,7 +416,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: rgba(243,242,240,0.5);
+    color: var(--transparent-link-color);
     border-bottom: 2px solid transparent;   
     text-decoration: none;
     position: relative;
@@ -433,7 +428,7 @@ body {
     font-weight: 500;
     line-height: 24px;
     color: #F3F2F0;
-    border-bottom: 2px solid #F3F2F0;   
+    border-bottom:  var(--bold-border-bottom);   
 }
 
 .portfolio__list-link:focus {
@@ -498,7 +493,7 @@ body {
     margin: 0;
     margin-bottom: 80px;
     padding: 0 186px 80px 0px;
-    border-bottom: 1px solid #F3F2F0;  
+    border-bottom: var(--border-bottom);  
 }
 
 .advantages {
@@ -612,7 +607,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
-    color: #F3F2F0;
+    color: var(--main-text-color);
 }
     
 .advantages__text {
@@ -620,13 +615,17 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    color: rgba( 243, 242, 240, .8);
+    color: var(--transparent-text-color);
 }
 
 
 
 
 /* tech */
+.tech {
+    margin-bottom: 178px;
+}
+
 .tech__list {
     margin: 0;
     padding: 0;
@@ -639,15 +638,15 @@ body {
 
 .tech__list-item {
    align-items: center;
-   border-bottom: 1px solid rgba( 243, 242, 240, .3);
-   border-right: 1px solid rgba( 243, 242, 240, .3);
+   border-bottom: var(--transparent-border-bottom);
+   border-right: var(--transparent-border-bottom);
    display: flex;
    justify-content: center;
 }
 
 .tech__list-item:first-child,
 .tech__list-item:nth-child(5) {
-    border-left: 1px solid rgba( 243, 242, 240, .3);
+    border-left: var(--transparent-border-bottom);
 }
 
 .tech__list-item--html,
@@ -658,7 +657,7 @@ body {
 .tech__list-item--php,
 .tech__list-item--vue,
 .tech__list-item--wordpress {
-    border-top:  1px solid rgba( 243, 242, 240, .3);
+    border-top:  var(--transparent-border-bottom);
 }
 
 .tech__list-img {
@@ -699,6 +698,134 @@ body {
 } 
 
 
+
+
+
+/* Блок tariffs */
+.tariffs__title,
+.tariffs__text,
+.tariffs__list-title, 
+.tariffs__list-discussion,
+.tariffs__list-note-title {
+    margin: 0;
+}
+
+.tariffs__wrapper {
+    padding-bottom: 80px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: var(--border-bottom);
+    position: relative;   
+}
+
+.tariffs__title {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;  
+    z-index: 1;
+}
+
+.tariffs__text {
+    color: var(--transparent-text-color);
+    padding-left: 10px;
+}
+
+.tariffs__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tariffs__list-item {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  repeat(3, 1fr);
+    grid-template-areas: "title note"
+                         "description note"
+                         "discussion price";
+    border-bottom: var(--border-bottom);         
+}   
+
+.tariffs__list-title {
+    margin-bottom: 18px;
+    grid-area: title;
+    width: 382px;
+}
+
+.tariffs-list-title-span {
+    width: 100%;
+    display: block;
+}
+
+.tariffs__list-item:last-child .tariffs__list-title {
+    width: 292px;
+}
+
+
+.tariffs__list-description {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--transparent-text-color);
+    grid-area: description;
+}
+
+.tariffs__list-discussion{
+    grid-area: discussion; 
+    position: relative;
+}
+
+.tariffs__list-discussion::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/arrow.svg");
+    position: absolute;
+    left: 156px;
+    top: 7.5px;  
+}
+
+.tariffs__list-note-title {
+    grid-area: note; 
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.tariffs__list-note {
+    margin: 0;
+    padding: 0;
+    grid-area: note;
+    padding-left: 27px; 
+}
+
+.tariffs__list-note-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--transparent-text-color);
+}
+
+.tariffs__list-note-item:first-child {
+    padding-top: 42px;
+}
+
+.tariffs__list-price {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 63px;
+    grid-area: price; 
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
 /*svg элементы*/
 .svg-circle-main-title {
     width: 253px;
@@ -734,6 +861,22 @@ body {
 
 .svg-circle circle {
     fill: var(--fill-circle);
+}
+
+.svg-circle-tariffs {
+    width: 140px;
+    height: 140px;
+    position: absolute; 
+    top: -50px;
+    left: -70px;
+}
+
+.svg-circle-prise {
+    width: 90px;
+    height: 90px;
+    position: absolute; 
+    top: 0px;
+    left: 0px;
 }
 
 .svg-triangle path {
