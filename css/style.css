@@ -682,7 +682,6 @@ body {
 
 .tariffs__wrapper {
     padding-bottom: 80px;
-    margin-bottom: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -708,7 +707,8 @@ body {
 }
 
 .tariffs__list-item {
-    margin-bottom: 120px;
+    padding-bottom: 60px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:  repeat(3, auto);
