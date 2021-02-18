@@ -3,24 +3,27 @@ body {
     font-size: 14px;
 }
 
-
 /*Тема*/
 .dark {
-    color: #F3F2F0;
+    --main-text-color: #F3F2F0;
+    --fill-circle: #D40000;
+    --fill-triangle: #FFFFFF;
+
+    background-color: #232326;
     background: linear-gradient(to bottom, #232326 50%, #151517 50%, #232326);
 }
 
-.dark .link-list__link {
-    color: #F3F2F0;
+.light {
+    --main-text-color: #010101;
+    --fill-circle: #FFFFFF;
+    --fill-triangle: #D40000;
+
+    background-color: #E5E5E5;
+    background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5);
+
 }
 
-.dark .svg-circle circle {
-    fill: #D40000;
-}
 
-.dark .svg-triangle path {
-    fill: #FFFFFF;
-}
 
 .dark .steps__list-item,
 .dark .social,
@@ -37,24 +40,6 @@ body {
 .dark .cv__text {
     color: rgba(243, 242, 240, .8);
 }
-
-.light {
-    background-color: #E5E5E5;
-    color: #010101;
-    background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5);
-}
-
-.light .link-list__link {
-    color: #010101;
-}
-
-.light .svg-circle circle {
-    fill: #FFFFFF;
-}
-
-.light .svg-triangle path {
-    fill: #D40000;
-} 
 
 .light .steps__list-item,
 .light .social,
@@ -181,6 +166,7 @@ body {
 .link-list__link {
     text-decoration: none;
     transition: color 0.3s;
+    color: var(--main-text-color);
 }
 
 .link-list__link:hover {
@@ -683,8 +669,8 @@ body {
 .tech__list-item:hover .tech__list-img {
     filter: grayscale(0);
 }
- /*
-.ul-tooltip {
+ 
+.ui-tooltip {
     padding: 20px;
     background-color: #E31B1B;
     border-color: #E31B1B!important;
@@ -699,7 +685,7 @@ body {
     text-align: center;
 }
 
-.ul-tooltip::before {
+.ui-tooltip-content::before {
     content: '';
     position: absolute;
     display: block;
@@ -710,8 +696,8 @@ body {
     width: 2px;
     border: 10px solid transparent;
     border-bottom: 10px solid #E31B1B;
-}
-*/  
+} 
+
 
 /*svg элементы*/
 .svg-circle-main-title {
@@ -746,6 +732,13 @@ body {
     left: 346px;
 }
 
+.svg-circle circle {
+    fill: var(--fill-circle);
+}
+
+.svg-triangle path {
+    fill: var(--fill-triangle);
+}
 
 .visually-hidden {
     position: absolute;
