@@ -21,7 +21,7 @@ body {
   
 
     background-color: #232326;
-    background: linear-gradient(to bottom, #232326 50%, #151517 50%, #232326);
+    background: linear-gradient(to bottom, #232326 50%, #151517 50%, #232326 58%);
 }
 
 .light {
@@ -39,7 +39,7 @@ body {
    
 
     background-color: #E5E5E5;
-    background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5);
+    background: linear-gradient(to bottom, #E5E5E5 50%, #E7E6E6 50%, #E5E5E5 58%);
 
 
 }
@@ -956,13 +956,15 @@ body {
  }
 
  .footer__link {
+    text-decoration: none;
     color: var(--footer-text);
+    border-bottom: 1px solid var(--footer-text);
     transition: .2s;
  }
 
  .footer__link:hover {
     color: var(--main-text-color);
-    
+    border-bottom: 1px solid var(--main-text-color);
  }
 
 
