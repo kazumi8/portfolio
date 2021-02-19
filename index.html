@@ -486,59 +486,63 @@
             </section>
             <section class="container__feedback feedback">
                 <div class="feedback__wrapper">
+                    <svg class="svg-circle svg-circle-feedback" viewBox="0 0 253 253" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="126.5" cy="126.5" r="126.5" />
+                    </svg>
+                    <svg class="svg-triangle" width="66" height="72" viewBox="0 0 66 72" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33 0L65.909 71.25H0.0910339L33 0Z" />
+                    </svg>
                     <h2 class="feedback__title title-bold">
-                        Расскажите о своем проекте
+                        <span class="feedback__title-span">Расскажите</span> о своем проекте
                     </h2>
                     <p class="feedback__text title-regular">
                         Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, 
                         заполните все поля, и я свяжусь с вами в ближайшее время
                     </p>
                 </div>
-                <form action="" class="feedback__form">
-                    <div>
-                        <label for="">
+                <div class="feedback__wrapper-form">
+                    <ul class="link-list link-list--line">
+                        <li class="link-list__item">
+                            <a class="link-list__link text-regular" href="#" target="_blank">
+                                Vk
+                            </a>
+                        </li>
+                        <li class="link-list__item">
+                            <a class="link-list__link text-regular" href="#" target="_blank">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="link-list__item">
+                            <a class="link-list__link text-regular" href="#" target="_blank">
+                                Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                    <form  class="feedback__form">
+                        <label class="feedback__form-label" for="phone">
                             Телефон или почта
                         </label>
-                        <input type="text" placeholder="Введите телефон">
-                    </div>
-                    <div>
-                        <label for="communicate">
+                        <input  class="feedback__form-input" id="phone" type="text" placeholder="Введите телефон">
+                        <label  class="feedback__form-label" for="communicate">
                             Выберите удобный способ связи
                         </label>
-                        <select name="communicate" id="communicate">
+                        <select class="feedback__form-select" name="communicate" id="communicate">
                             <option>Telegram</option>
                             <option>WhatsApp</option>
                             <option>Viber</option>
                             <option>Звонок на телефон</option>
                             <option>SMS сообщение</option>
                           </select>
-                    </div>
-                    <button type="submit">
+                    <button  class="feedback__form-button text-bold" type="submit">
                         Отправить
                     </button>
                 </form>
-                <ul class="link-list link-list--line">
-                    <li class="link-list__item">
-                        <a class="link-list__link text-regular" href="#" target="_blank">
-                            Vk
-                        </a>
-                    </li>
-                    <li class="link-list__item">
-                        <a class="link-list__link text-regular" href="#" target="_blank">
-                            Instagram
-                        </a>
-                    </li>
-                    <li class="link-list__item">
-                        <a class="link-list__link text-regular" href="#" target="_blank">
-                            Linkedin
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </section>
         </main>
     </div>
     <footer class="footer">
-        <nav class="header__nav">
+        <nav class="footer__nav">
             <ul class="link-list">
                 <li class="link-list__item">
                     <a href="#" class="link-list__link text-small">
@@ -566,7 +570,6 @@
                     </a>
                 </li>
             </ul>
-        </nav>
         <ul class="link-list link-list--line">
             <li class="link-list__item">
                 <a class="link-list__link text-small" href="tel:+79237777777">
@@ -579,12 +582,16 @@
                 </a>
             </li>
         </ul>
+        </nav>
         <div class="footer__wrapper">
             <p class="footer__text"> 
-                © 2020, Все права защищены
+                &copy;2020, Все права защищены
             </p>
             <p class="footer__text">
-                Сделано в рамках курса учебной платформы Frontend Blok
+                Сделано в рамках курса учебной платформы
+                <a class="footer__link" href="#">
+                    Frontend Blok
+                </a>
             </p>
         </div>
         
